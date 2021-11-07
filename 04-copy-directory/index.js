@@ -12,7 +12,7 @@ function createDir() {
 }
 
 function copyDir() {
-    fsPromises.rmdir(path.join(__dirname, 'files-copy'), { recursive: true, force: true })
+    fsPromises.rm(path.join(__dirname, 'files-copy'), { recursive: true, force: true })
           .then(() => {
             createDir()
           })
