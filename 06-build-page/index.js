@@ -55,7 +55,7 @@ function buildPage() {
                               await fsPromises.readFile(path.join(__dirname, 'styles', file.name))
                                     .then(buff => {
                                           const content = buff.toString()
-                                          return fsPromises.appendFile(path.join(__dirname, 'project-dist', 'style.css'), content + '\n')
+                                          return fsPromises.appendFile(path.join(__dirname, 'project-dist', 'style.css'), content + '\n\n')
                                     })
                         }
                   })
